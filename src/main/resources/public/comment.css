@@ -1,0 +1,19 @@
+/*
+* @Author: Administrator
+* @Date:   2019-08-24 01:17:26
+* @Last Modified by:   Administrator
+* @Last Modified time: 2019-08-25 20:48:08
+*/
+*{
+  margin: 0;
+  padding: 0;
+}
+.topbar{
+  height: 40;
+  background: #333;
+}
+.wrapper{
+  height: 40;
+  width: 1200px;
+  margin: 0 auto;
+}
