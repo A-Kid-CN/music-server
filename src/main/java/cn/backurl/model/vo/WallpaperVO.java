@@ -1,4 +1,4 @@
-package cn.backurl.vo;
+package cn.backurl.model.vo;
 
 import cn.backurl.model.wallpaper.Wallpaper;
 import lombok.Data;

@@ -1,4 +1,4 @@
-package cn.backurl.constant;
+package cn.backurl.common.constant;
 
 /**
  * <p>

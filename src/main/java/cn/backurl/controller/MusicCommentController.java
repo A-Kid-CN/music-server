@@ -2,8 +2,8 @@ package cn.backurl.controller;
 
 import cn.backurl.model.music.dto.CommentResult;
 import cn.backurl.model.music.MusicComment;
-import cn.backurl.result.AjaxResult;
-import cn.backurl.result.ResultCode;
+import cn.backurl.common.result.AjaxResult;
+import cn.backurl.common.result.ResultCode;
 import cn.backurl.service.music.MusicCommentService;
 import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;

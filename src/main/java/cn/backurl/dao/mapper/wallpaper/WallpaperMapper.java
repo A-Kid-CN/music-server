@@ -1,4 +1,4 @@
-package cn.backurl.dao.wallpaper;
+package cn.backurl.dao.mapper.wallpaper;
 
 
 import cn.backurl.model.wallpaper.Wallpaper;

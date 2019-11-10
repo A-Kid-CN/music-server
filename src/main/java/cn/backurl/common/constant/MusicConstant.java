@@ -1,4 +1,4 @@
-package cn.backurl.constant;
+package cn.backurl.common.constant;
 
 import lombok.extern.slf4j.Slf4j;
 

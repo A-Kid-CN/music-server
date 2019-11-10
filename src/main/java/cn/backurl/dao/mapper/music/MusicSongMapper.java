@@ -1,4 +1,4 @@
-package cn.backurl.dao.music;
+package cn.backurl.dao.mapper.music;
 
 
 import cn.backurl.model.music.MusicSong;

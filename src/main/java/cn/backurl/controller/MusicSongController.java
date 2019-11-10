@@ -1,8 +1,8 @@
 package cn.backurl.controller;
 
 import cn.backurl.model.music.MusicSong;
-import cn.backurl.result.AjaxResult;
-import cn.backurl.result.ResultCode;
+import cn.backurl.common.result.AjaxResult;
+import cn.backurl.common.result.ResultCode;
 import cn.backurl.service.music.MusicSongService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

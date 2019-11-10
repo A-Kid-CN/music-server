@@ -1,7 +1,7 @@
 package cn.backurl.exception;
 
 
-import cn.backurl.result.ResultCode;
+import cn.backurl.common.result.ResultCode;
 
 /**
  * 参数验证异常

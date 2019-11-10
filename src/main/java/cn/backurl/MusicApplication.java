@@ -9,8 +9,8 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @EnableDiscoveryClient
-@SpringBootApplication(scanBasePackages = {"cn.backurl.bing"})
-@MapperScan("cn.backurl.bing")
+@SpringBootApplication(scanBasePackages = {"cn.backurl"})
+@MapperScan("cn.backurl.dao")
 @Slf4j
 public class MusicApplication implements WebMvcConfigurer {
 

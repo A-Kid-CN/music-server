@@ -1,8 +1,8 @@
 package cn.backurl.service.music.impl;
 
-import cn.backurl.constant.MusicConstant;
+import cn.backurl.common.constant.MusicConstant;
 import cn.backurl.model.music.MusicSong;
-import cn.backurl.dao.music.MusicSongMapper;
+import cn.backurl.dao.mapper.music.MusicSongMapper;
 import cn.backurl.service.music.MusicSongService;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;

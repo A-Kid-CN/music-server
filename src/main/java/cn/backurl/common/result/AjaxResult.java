@@ -1,4 +1,4 @@
-package cn.backurl.result;
+package cn.backurl.common.result;
 
 /**
  * ajax数据结构

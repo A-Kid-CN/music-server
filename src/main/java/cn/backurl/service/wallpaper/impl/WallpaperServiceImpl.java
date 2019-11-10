@@ -1,6 +1,6 @@
 package cn.backurl.service.wallpaper.impl;
 
-import cn.backurl.dao.wallpaper.WallpaperMapper;
+import cn.backurl.dao.mapper.wallpaper.WallpaperMapper;
 import cn.backurl.model.wallpaper.Wallpaper;
 import cn.backurl.service.wallpaper.WallpaperService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

@@ -1,8 +1,8 @@
 package cn.backurl.service.music.impl;
 
 
-import cn.backurl.constant.MusicConstant;
-import cn.backurl.dao.music.MusicCommentMapper;
+import cn.backurl.common.constant.MusicConstant;
+import cn.backurl.dao.mapper.music.MusicCommentMapper;
 import cn.backurl.model.music.MusicComment;
 import cn.backurl.model.music.dto.BeReplied;
 import cn.backurl.model.music.dto.CommentResult;
