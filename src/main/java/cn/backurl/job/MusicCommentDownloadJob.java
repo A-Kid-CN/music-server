@@ -29,7 +29,7 @@ public class MusicCommentDownloadJob {
 
     /**
      * <p>
-     * 功能描述: 1s执行一次
+     * 功能描述: 凌晨执行一次
      * </p>
      *
      * @param
@@ -37,7 +37,7 @@ public class MusicCommentDownloadJob {
      * @Date: 2019-08-19 22:41
      * @Return: void
      */
-    @Scheduled(cron = "0/10 * * * * ? ")
+    @Scheduled(cron = "0 0 0 * * ? ")
     public void execute() {
         int pageNo = 1;
         int pageSize = 100;
