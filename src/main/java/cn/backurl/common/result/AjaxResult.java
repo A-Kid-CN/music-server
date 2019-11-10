@@ -12,12 +12,12 @@ public class AjaxResult {
     /**
      * 状态码
      */
-    private int statusCode = ResultCode.SUCCESS.getCode();
+    private int code = ResultCode.SUCCESS.getCode();
 
     /**
      * 请求返回信息
      */
-    private String message = "";
+    private String msg = ResultCode.SUCCESS.getMsg();
 
     /**
      * 请求结果
@@ -30,20 +30,20 @@ public class AjaxResult {
     private AjaxResult() {
     }
 
-    public int getStatusCode() {
-        return statusCode;
+    public int getCode() {
+        return code;
     }
 
-    public void setStatusCode(int statusCode) {
-        this.statusCode = statusCode;
+    public void setCode(int code) {
+        this.code = code;
     }
 
-    public String getMessage() {
-        return message;
+    public String getMsg() {
+        return msg;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
+    public void setMsg(String msg) {
+        this.msg = msg;
     }
 
     public Object getData() {
@@ -79,7 +79,7 @@ public class AjaxResult {
      * @Return: AjaxResult
      */
     public static AjaxResult success(Object data) {
-        return success("", data);
+        return success(ResultCode.SUCCESS.getMsg(), data);
     }
 
     /**
@@ -92,9 +92,9 @@ public class AjaxResult {
      * @Date: 2019-04-20 22:16
      * @Return: AjaxResult
      */
-    public static AjaxResult success(String message, Object data) {
+    public static AjaxResult success(String msg, Object data) {
         AjaxResult result = new AjaxResult();
-        result.setMessage(message);
+        result.setMsg(msg);
         result.setData(data);
         return result;
     }
@@ -120,33 +120,33 @@ public class AjaxResult {
     /**
      * 获取错误结果模板
      *
-     * @param message 请求返回信息
+     * @param msg 请求返回信息
      * @return AjaxResult
      */
-    public static AjaxResult failure(ResultCode statusCode, String message) {
+    public static AjaxResult failure(ResultCode code, String msg) {
         AjaxResult result = new AjaxResult();
-        result.setStatusCode(statusCode.getCode());
-        result.setMessage(message);
+        result.setCode(code.getCode());
+        result.setMsg(msg);
         return result;
     }
 
     /**
      * 获取错误结果模板
      *
-     * @param message 请求返回信息
+     * @param msg 请求返回信息
      * @param data     请求结果
      * @return AjaxResult
      */
-    public static AjaxResult failure(ResultCode statusCode, String message, Object data) {
+    public static AjaxResult failure(ResultCode code, String msg, Object data) {
         AjaxResult result = new AjaxResult();
-        result.setStatusCode(statusCode.getCode());
-        result.setMessage(message);
+        result.setCode(code.getCode());
+        result.setMsg(msg);
         result.setData(data);
         return result;
     }
 
     @Override
     public String toString() {
-        return "AjaxResult [statusCode=" + statusCode + ", message=" + message + ", data=" + data + "]";
+        return "AjaxResult [code=" + code + ", msg=" + msg + ", data=" + data + "]";
     }
 }
