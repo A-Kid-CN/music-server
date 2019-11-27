@@ -35,13 +35,10 @@ public class IndicatorService {
     }
 
 
-    @KafkaListener(topics = "akidGroup1")
+    @KafkaListener(topics = "akidTopic", groupId = "foo")
     public void processMessage(ConsumerRecord<Integer, String> record) {
         log.info("kafka processMessage start");
         log.info("processMessage, topic = {}, msg = {}", record.topic(), record.value());
-
-        // do something ...
-
         log.info("kafka processMessage end");
     }
 
