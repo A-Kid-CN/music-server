@@ -41,7 +41,7 @@ public class MusicCommentDownloadJob {
     public void execute() {
         int pageNo = 1;
         int pageSize = 100;
-        long songId = 440208476l;
+        long songId = 1399533630L;
         CommentResult commentResult = new CommentResult();
         commentResult.setMore(true);
         while (commentResult.isMore()) {

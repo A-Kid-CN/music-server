@@ -38,13 +38,22 @@ spring:
         maintainTimeStats: false
   application:
     name: music-server
-
-logging:
-  level:
-    com.baomidou.mybatisplus.samples.quickstart: debug
-  file: /usr/local/log/music.log
-
-
+  kafka:
+    producer:
+      batch-size: 16384
+      buffer-memory: 33554432
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      bootstrap-servers: 106.52.126.202:9092
+      retries: 0
+    consumer:
+      bootstrap-servers: 106.52.126.202:9092
+      group-id: foo
+      auto-offset-reset: earliest
+      enable-auto-commit: true
+      auto-commit-interval: 100
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
 #mybatis
 mybatis-plus:
   # 如果是放在src/main/java目录下 classpath:/com/yourpackage/*/mapper/*Mapper.xml
