@@ -12,7 +12,7 @@ import org.springframework.util.concurrent.ListenableFutureCallback;
 
 /**
  * <p>
- *
+ * kafka发送者
  * </p>
  *
  * @author: akid
@@ -20,26 +20,19 @@ import org.springframework.util.concurrent.ListenableFutureCallback;
  **/
 @Service
 @Slf4j
-public class IndicatorService {
+public class KafkaSender {
 
 
     private final KafkaTemplate<Integer, String> kafkaTemplate;
 
     /**
      * 注入KafkaTemplate
+     *
      * @param kafkaTemplate kafka模版类
      */
     @Autowired
-    public IndicatorService(KafkaTemplate kafkaTemplate) {
+    public KafkaSender(KafkaTemplate kafkaTemplate) {
         this.kafkaTemplate = kafkaTemplate;
-    }
-
-
-    @KafkaListener(topics = "akidTopic", groupId = "foo")
-    public void processMessage(ConsumerRecord<Integer, String> record) {
-        log.info("kafka processMessage start");
-        log.info("processMessage, topic = {}, msg = {}", record.topic(), record.value());
-        log.info("kafka processMessage end");
     }
 
     public void sendMessage(String topic, String data) {
@@ -53,7 +46,7 @@ public class IndicatorService {
 
             @Override
             public void onSuccess(SendResult<Integer, String> result) {
-                log.info("kafka sendMessage success topic = {}, data = {}",topic, data);
+                log.info("kafka sendMessage success topic = {}, data = {}", topic, data);
             }
         });
         log.info("kafka sendMessage end");
